@@ -11,7 +11,12 @@ class FlatList extends Component {
     return (
       <div className="flat-list">
         {this.props.flatList.map((item) => {
-          return <Flat item={item} key={item.lng} setMarker={this.props.setMarker} />;
+          return <Flat
+            item={item}
+            key={item.lng}
+            setMarker={this.props.setMarker}
+            selected={item.lat === this.props.coord.lat}
+          />;
         })}
       </div>
     );

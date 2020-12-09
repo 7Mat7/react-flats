@@ -22,9 +22,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <FlatList setMarker={this.setMarker} />
+        <FlatList
+          setMarker={this.setMarker}
+          coord={this.state.marker}
+         />
         <div className="map-container">
-          <SimpleMap center={this.state.center} coord={this.state.marker} />
+          <SimpleMap
+            center={this.state.center}
+            coord={this.state.marker}
+          />
         </div>
       </div>
     );

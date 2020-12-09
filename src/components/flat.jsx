@@ -11,7 +11,7 @@ class Flat extends Component {
 
   render() {
     return (
-      <div className="card" onClick={this.handleClick}>
+      <div className={`card ${this.props.selected ? "active" : ""}`} onClick={this.handleClick}>
         <img src={this.props.item.imageUrl} alt="" />
         <div className="card-category">
           {this.props.item.price} {this.props.item.priceCurrency}
